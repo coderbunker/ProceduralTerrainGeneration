@@ -393,6 +393,23 @@ function generateHeightmap(fn){
         }
     }
 }
+function drawGlobe(height_fn, shader, offset){
+  if(!heightmap) generateHeightmap(height_fn);
+  var canvas = document.getElementById("field");
+  var ctx = canvas.getContext("2d");
+
+  for(var i = 0; i < viewport.width / viewport.zoom; i++)
+  {
+    for(var j = 0; j < viewport.height / viewport.zoom; j++)
+    {
+      var lat = Math.abs(j - (viewport.height/2))/(viewport.height/2);
+      var lon = Math.abs(i - (viewport.width/2))/(viewport.width/2);
+      var tuple = shader(j,i);
+      ctx.fillStyle = 'rgba(' + (100 * tuple[0]) + '%,' + (100 * tuple[1]) + '%,' + (100 * tuple[2]) + '%,' + tuple[3] + ')';
+      ctx.fillRect(i, j, viewport.zoom, viewport.zoom);
+    }
+  }
+}
 function draw(height_fn, shader) {
     if(!heightmap) generateHeightmap(height_fn);
     //noise.seed(seed);

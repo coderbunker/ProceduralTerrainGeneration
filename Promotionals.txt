@@ -1,0 +1,11 @@
+# Procedural Map Generation Workshop
+
+Come learn the basics of computer terrain and map generation! Games, computer graphics, and spatial modelling all benefit from landscapes that can be generated cheaply and manipulated easily. This interactive workshop will walk you through the theory and practice behind the use of noise functions, heightmap creation, approximating natural landscapes, and the performance concerns that arise. The participants will be guided through the process of writing a Javascript demonstration of all these concepts.
+
+- Date: Saturday the 28th of November
+- Time: 12:00 - 15:00
+- Cost: 600 RMB
+
+*Required*: A laptop with a working internet connection
+
+# 
